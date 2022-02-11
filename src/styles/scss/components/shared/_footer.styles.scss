@@ -1,0 +1,14 @@
+@use '../../base' as *;
+
+.main-footer {
+    @extend %flex-center;
+
+    width: 100vw;
+    height: 5rem;
+
+    background-color: $darkGray;
+
+    span {
+        color: #8a8a8a;
+    }
+}

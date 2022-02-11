@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Heebo", sans-serif;
+  margin: 0%;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.loader-container, .main-footer, .main-header, .page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: calc(100vh - 5rem);
+  padding: 1rem;
+}
+@media (min-width: 62rem) {
+  .home-page section {
+    max-width: 63rem;
+  }
+}
+.home-page .jobs-table-container {
+  width: 100%;
+  height: 26rem;
+  margin-bottom: 1rem;
+}
+.home-page .jobs-table-container > div {
+  width: 100%;
+  height: 21rem;
+  overflow-y: auto;
+  border-bottom: 1px solid #000000;
+}
+.home-page .jobs-chart-container {
+  width: 100%;
+  height: 30rem;
+}
+
+.page-not-found {
+  flex-direction: column;
+  gap: 1rem;
+  width: 100vw;
+  min-height: calc(100vh - 5rem);
+  padding: 1rem;
+}
+.page-not-found h1 {
+  font-size: 5rem;
+}
+.page-not-found button {
+  width: 12rem;
+  height: 4rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #303134;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.page-not-found button:hover {
+  background-color: #464646;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 100%;
+  height: 25rem;
+  padding: 1rem;
+  background-color: #000000;
+  overflow-x: auto;
+}
+.bar-chart .bar-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  color: #ffff00;
+}
+.bar-chart .bar-container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.bar-chart .bar-container .title {
+  height: 4rem;
+  overflow-y: auto;
+}
+.bar-chart .bar-container .bar {
+  width: 100%;
+  background-color: #ffff00;
+}
+
+.main-header {
+  width: 100vw;
+  min-height: 5rem;
+  background-color: #303134;
+  color: #ffffff;
+}
+.main-header h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.main-footer {
+  width: 100vw;
+  height: 5rem;
+  background-color: #303134;
+}
+.main-footer span {
+  color: #8a8a8a;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #303134;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: #303134;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+.jobs-table {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.jobs-table thead {
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+  width: 100%;
+  height: 4rem;
+  background-color: #303134;
+  color: #ffffff;
+  border-bottom: none;
+}
+.jobs-table thead td {
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid black;
+}
+.jobs-table tr {
+  width: 100%;
+}
+.jobs-table tbody {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+.jobs-table tbody tr {
+  height: 3rem;
+}
+.jobs-table tbody tr td {
+  text-align: center;
+  overflow-x: auto;
+  border: 1px solid black;
+}
+.jobs-table tbody tr:last-child {
+  border-bottom: none;
+}

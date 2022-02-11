@@ -1,0 +1,36 @@
+@use '../base' as *;
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    min-height: calc(100vh - 5rem);
+    padding: 1rem;
+
+    section {
+        @media (min-width: 62rem) {
+            max-width: 63rem;
+        }
+    }
+
+    .jobs-table-container {
+        width: 100%;
+        height: 26rem;
+        margin-bottom: 1rem;
+
+        & > div {
+            width: 100%;
+            height: 21rem;
+
+            overflow-y: auto;
+            border-bottom: 1px solid $black;
+        }
+    }
+
+    .jobs-chart-container {
+        width: 100%;
+        height: 30rem;
+    }
+}

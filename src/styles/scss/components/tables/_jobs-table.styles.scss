@@ -1,0 +1,56 @@
+@use '../../base' as *;
+
+.jobs-table {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    thead {
+        position: sticky;
+        top: -1px;
+        z-index: 100;
+
+        width: 100%;
+        height: 4rem;
+
+        background-color: $darkGray;
+        color: $white;
+        border-bottom: none;
+
+        td {
+            text-align: center;
+            font-weight: 700;
+            border: 1px solid black;
+        }
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    tbody {
+        width: 100%;
+        height: 100%;
+
+        border: 1px solid black;
+        border-top: none;
+        border-bottom: none;
+
+        tr {
+            height: 3rem;
+
+            td {
+                text-align: center;
+                overflow-x: auto;
+                border: 1px solid black;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
