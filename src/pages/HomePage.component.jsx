@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Loader from '../components/shared/Loader.component';
 import JobsTable from '../components/tables/JobsTable.component';
@@ -9,6 +10,8 @@ import * as jobsAPI from '../api/jobs.api';
 import JobsTableRow from '../models/jobs-table-row.model';
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
     const [isLoading, setIsLoading] = useState(true);
     const [jobsTableRowData, setJobsTableRowData] = useState([]);
     const [jobsChartData, setJobsChartData] = useState([]);
@@ -29,7 +32,7 @@ const HomePage = () => {
                 setJobsTableRowData(jobsTableData);
             })
             .catch((err) => {
-                console.log(err);
+                navigate('*');
             });
 
         jobsAPI
@@ -38,7 +41,7 @@ const HomePage = () => {
                 setJobsChartData(data);
             })
             .catch((err) => {
-                console.log(err);
+                navigate('*');
             });
 
         setIsLoading(false);
