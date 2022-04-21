@@ -6,7 +6,7 @@
   <p align="center">
     This client-side application is part of the Hallo015 Jobs assingment built with React and JavaScript. 
   </p>
-    <a href="https://github.com/almog-gutin/Hallo015-Jobs-Assignment-Server-Node-JS">View Server Repostiory</a>
+    <a href="https://github.com/almoggutin/Hallo015-Jobs-Assignment-Server-Node-JS">View Server Repostiory</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -51,7 +51,7 @@ In the homepage of the application there is a table and a chart that displays di
 **Git clone**
 
 ```
-git clone https://github.com/almog-gutin/Hallo015-Jobs-Assignment-Client-React-JS.git
+git clone https://github.com/almoggutin/Hallo015-Jobs-Assignment-Client-React-JS.git
 ```
 
 **Instructions**
